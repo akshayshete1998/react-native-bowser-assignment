@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, TextInput, Image, FlatList } from 'react-native'
 import { styles } from './style'
-import axios from 'axios'
 export const SearchScreen = ({ navigation }) => {
     const [gifs, setGifs] = useState([]);
     const [term, updateTerm] = useState('');
 
     const fetchApi = async () => {
         try {
-            // const result = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=7HXUru58nfzAjvDg4TeTy6Cnad3pP8uf&q=${term}`)
-            // setGifs(result.data)
             const API_KEY = '7HXUru58nfzAjvDg4TeTy6Cnad3pP8uf';
             const BASE_URL = 'http://api.giphy.com/v1/gifs/search';
             const resJson = await fetch(`${BASE_URL}?api_key=${API_KEY}&q=${term}`);
@@ -23,7 +20,6 @@ export const SearchScreen = ({ navigation }) => {
     const onEdit = (text) => {
         updateTerm(text)
         fetchApi()
-        console.log('tetxt', text)
     }
     return (
         <View style={styles.constainer}>

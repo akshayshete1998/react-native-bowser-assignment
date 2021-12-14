@@ -5,10 +5,6 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 
 export const GifDetails = ({ navigation, item }) => {
-  console.log('item', item)
-  console.log('imagessssss', item.user?.banner_image)
-  console.log('details', item?.item?.user?.description)
-  console.log('username', item?.item?.user?.username)
   return (
     <View style={styles.container}>
       <ImageBackground style={styles.backgroundImg} resizeMode="cover" source={{ uri: item?.user?.banner_image === '' ? 'https://media3.giphy.com/channel_assets/snl/FNmjSGabYyy5.jpg' : item?.user?.banner_image }}>

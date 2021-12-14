@@ -23,12 +23,6 @@ export const GifList = ({ navigation }) => {
     setFavorite(!favorite)
   }
   const renderGifList = (item, index) => {
-    console.log('dadad', item.item.title)
-    // console.log('descrp', item.item.images.user.description)
-    console.log('details', item?.item?.user?.description)
-    console.log('username', item?.item?.user?.username)
-    console.log('username', item?.item?.user?.banner_image)
-
     return (
       <View style={styles.itemStyle}>
         <View>
