@@ -46,5 +46,13 @@ export const styles = StyleSheet.create({
         height:27,
         width:27,
         resizeMode:'stretch'
+    },
+    textColor:{
+        color:'#FFFFFF',
+        fontSize:30
+    },
+    loadingText:{
+        alignItems:'center',
+        justifyContent:'center'
     }
 })
