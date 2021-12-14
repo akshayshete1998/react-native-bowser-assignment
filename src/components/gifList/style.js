@@ -10,14 +10,10 @@ export const styles = StyleSheet.create({
         flex: 1,
         width: '100%'
     },
-    itemBackground: {
-        backgroundColor: 'red'
-    },
     gifImges: {
         height: 150,
         width: 160,
         resizeMode: 'stretch',
-        backgroundColor: 'pink'
     },
     gifAndImgWrapper: {
         width: '85%',
