@@ -8,7 +8,7 @@ export const GifDetails = ({ navigation, item }) => {
   return (
     <View style={styles.container}>
       <ImageBackground style={styles.backgroundImg} resizeMode="cover" source={{ uri: item?.user?.banner_image === '' ? 'https://media3.giphy.com/channel_assets/snl/FNmjSGabYyy5.jpg' : item?.user?.banner_image }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() =>{navigation.goBack()}}>
         <View style={styles.backIcon}>
           <Icon name="ios-arrow-back-outline" size={30} color={'#FFFFFF'} />
         </View>
